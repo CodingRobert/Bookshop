@@ -97,23 +97,21 @@
     }
 
     /* Video background */
-    .hero video,
-    .hero img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 100%;
-      height: 100%;
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
       object-fit: cover;
-      transform: translate(-50%, -50%);
       z-index: -1;
-      filter: brightness(0.5);
     }
 
     .hero h1 {
       font-size: 4rem;
       text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
       letter-spacing: 0.15em;
+      z-index: 1;
     }
 
     /* Preview Container */
@@ -250,7 +248,7 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <video autoplay muted loop playsinline> 
+    <video class="video-background" autoplay muted loop playsinline> 
       <source src="newspapers.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
@@ -326,10 +324,10 @@
 
       <div class="subbox" tabindex="0" aria-label="Yu-Gi-Oh! Cards preview">
         <div class="image-wrapper">
-          <img src="https://via.placeholder.com/300x180?text=Yu-Gi-Oh" alt="Yu-Gi-Oh! Cards" />
+          <img src="https://via.placeholder.com/300x180?text=Yu-Gi-Oh" alt="Yu-Gi-Oh Cards" />
           <h3>Yu-Gi-Oh!</h3>
         </div>
-        <p>Popular duel cards and accessories.</p>
+        <p>Strategies and rare cards for duelists.</p>
       </div>
 
       <div class="subbox" tabindex="0" aria-label="Sports Cards preview">
@@ -337,15 +335,15 @@
           <img src="https://via.placeholder.com/300x180?text=Sports+Cards" alt="Sports Cards" />
           <h3>Sports Cards</h3>
         </div>
-        <p>Baseball, basketball, football cards and memorabilia.</p>
+        <p>Memorabilia and trading cards from various sports.</p>
       </div>
 
       <div class="subbox" tabindex="0" aria-label="Trading Card Accessories preview">
         <div class="image-wrapper">
           <img src="https://via.placeholder.com/300x180?text=Accessories" alt="Trading Card Accessories" />
-          <h3>Trading Card Accessories</h3>
+          <h3>Accessories</h3>
         </div>
-        <p>Protective sleeves, binders, and display cases.</p>
+        <p>Protective sleeves, binders, and other card accessories.</p>
       </div>
     </div>
   </section>
