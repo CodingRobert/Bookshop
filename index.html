@@ -99,19 +99,29 @@
     /* Video background */
     .video-background {
       position: fixed;
-      top: 0;
-      left: 0;
+      top: 0; left: 0;
       width: 100vw;
       height: 100vh;
       object-fit: cover;
+      z-index: -2;
+    }
+
+    /* Overlay between video and title */
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.4);
       z-index: -1;
     }
 
     .hero h1 {
+      position: relative;
+      z-index: 1;
       font-size: 4rem;
       text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
       letter-spacing: 0.15em;
-      z-index: 1;
     }
 
     /* Preview Container */
@@ -252,6 +262,7 @@
       <source src="newspapers.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
+    <div class="overlay"></div>
     <h1>PAPIROS</h1>
   </section>
 
@@ -298,7 +309,7 @@
           <img src="https://via.placeholder.com/300x180?text=Entertainment" alt="Entertainment News" />
           <h3>Entertainment</h3>
         </div>
-        <p>Celebrity news, movies, and cultural events.</p>
+        <p>Celebrity news, movies, and TV updates.</p>
       </div>
     </div>
 
@@ -311,23 +322,23 @@
           <img src="https://via.placeholder.com/300x180?text=Pokemon" alt="Pokemon Cards" />
           <h3>Pokemon Cards</h3>
         </div>
-        <p>Rare and popular Pokemon trading cards for collectors.</p>
+        <p>Collect and trade your favorite Pokemon cards.</p>
       </div>
 
-      <div class="subbox" tabindex="0" aria-label="Magic: The Gathering preview">
+      <div class="subbox" tabindex="0" aria-label="Magic The Gathering preview">
         <div class="image-wrapper">
-          <img src="https://via.placeholder.com/300x180?text=Magic" alt="Magic The Gathering" />
+          <img src="https://via.placeholder.com/300x180?text=Magic+The+Gathering" alt="Magic The Gathering Cards" />
           <h3>Magic: The Gathering</h3>
         </div>
-        <p>Powerful cards and decks for competitive play.</p>
+        <p>Explore decks and strategy from Magic players worldwide.</p>
       </div>
 
-      <div class="subbox" tabindex="0" aria-label="Yu-Gi-Oh! Cards preview">
+      <div class="subbox" tabindex="0" aria-label="Yu-Gi-Oh preview">
         <div class="image-wrapper">
           <img src="https://via.placeholder.com/300x180?text=Yu-Gi-Oh" alt="Yu-Gi-Oh Cards" />
           <h3>Yu-Gi-Oh!</h3>
         </div>
-        <p>Strategies and rare cards for duelists.</p>
+        <p>Find rare cards and build your ultimate deck.</p>
       </div>
 
       <div class="subbox" tabindex="0" aria-label="Sports Cards preview">
@@ -335,15 +346,15 @@
           <img src="https://via.placeholder.com/300x180?text=Sports+Cards" alt="Sports Cards" />
           <h3>Sports Cards</h3>
         </div>
-        <p>Memorabilia and trading cards from various sports.</p>
+        <p>Memorabilia and collectibles from your favorite sports stars.</p>
       </div>
 
       <div class="subbox" tabindex="0" aria-label="Trading Card Accessories preview">
         <div class="image-wrapper">
           <img src="https://via.placeholder.com/300x180?text=Accessories" alt="Trading Card Accessories" />
-          <h3>Accessories</h3>
+          <h3>Trading Card Accessories</h3>
         </div>
-        <p>Protective sleeves, binders, and other card accessories.</p>
+        <p>Protect your cards with sleeves, binders, and more.</p>
       </div>
     </div>
   </section>
