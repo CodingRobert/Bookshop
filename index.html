@@ -147,34 +147,59 @@
 
     /* Subboxes inside preview */
     .subbox {
-      flex: 1;
+      position: relative;
+      cursor: pointer;
       background: #f0f0f0;
       border-radius: 8px;
-      padding: 1rem;
+      overflow: hidden;
       box-shadow: inset 0 0 8px rgba(0,0,0,0.05);
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
+      justify-content: flex-start;
+      align-items: stretch;
       transition: background 0.3s ease;
-      cursor: pointer;
     }
 
     .subbox:hover {
       background: #ddd;
     }
 
-    .subbox h3 {
-      margin-bottom: 0.7rem;
-      color: #333;
-      font-size: 1.2rem;
+    .image-wrapper {
+      position: relative;
+      width: 100%;
+      height: 180px;
+      overflow: hidden;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .image-wrapper h3 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      margin: 0;
+      padding: 0.5rem 1rem;
+      color: white;
+      font-size: 1.3rem;
+      font-weight: 700;
+      background: linear-gradient(180deg, transparent, rgba(0,0,0,0.7));
+      text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+      box-sizing: border-box;
     }
 
     .subbox p {
+      padding: 1rem;
       font-size: 0.9rem;
       color: #555;
       line-height: 1.3;
+      flex-grow: 1;
     }
 
     /* Responsive */
@@ -182,6 +207,15 @@
       .preview-container {
         flex-direction: column;
       }
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.9rem;
+      color: #666;
+      background: #f9f9f9;
+      border-top: 1px solid #ddd;
     }
 
   </style>
@@ -230,27 +264,42 @@
       <h2 id="newspapers-preview">Newspapers</h2>
 
       <div class="subbox" tabindex="0" aria-label="Local News preview">
-        <h3>Local News</h3>
+        <div class="image-wrapper">
+          <img src="https://via.placeholder.com/300x180?text=Local+News" alt="Local News" />
+          <h3>Local News</h3>
+        </div>
         <p>Latest headlines from your city and nearby areas.</p>
       </div>
 
       <div class="subbox" tabindex="0" aria-label="International News preview">
-        <h3>International</h3>
+        <div class="image-wrapper">
+          <img src="https://via.placeholder.com/300x180?text=International" alt="International News" />
+          <h3>International</h3>
+        </div>
         <p>Global events and world affairs from trusted sources.</p>
       </div>
 
       <div class="subbox" tabindex="0" aria-label="Business News preview">
-        <h3>Business</h3>
+        <div class="image-wrapper">
+          <img src="https://via.placeholder.com/300x180?text=Business" alt="Business News" />
+          <h3>Business</h3>
+        </div>
         <p>Market updates, finance, and industry news.</p>
       </div>
 
       <div class="subbox" tabindex="0" aria-label="Sports News preview">
-        <h3>Sports</h3>
+        <div class="image-wrapper">
+          <img src="https://via.placeholder.com/300x180?text=Sports" alt="Sports News" />
+          <h3>Sports</h3>
+        </div>
         <p>Scores, analysis, and sports highlights.</p>
       </div>
 
       <div class="subbox" tabindex="0" aria-label="Entertainment News preview">
-        <h3>Entertainment</h3>
+        <div class="image-wrapper">
+          <img src="https://via.placeholder.com/300x180?text=Entertainment" alt="Entertainment News" />
+          <h3>Entertainment</h3>
+        </div>
         <p>Celebrity news, movies, and cultural events.</p>
       </div>
     </div>
@@ -260,34 +309,49 @@
       <h2 id="cards-preview">Cards</h2>
 
       <div class="subbox" tabindex="0" aria-label="Pokemon Cards preview">
-        <h3>Pokemon Cards</h3>
+        <div class="image-wrapper">
+          <img src="https://via.placeholder.com/300x180?text=Pokemon" alt="Pokemon Cards" />
+          <h3>Pokemon Cards</h3>
+        </div>
         <p>Rare and popular Pokemon trading cards for collectors.</p>
       </div>
 
       <div class="subbox" tabindex="0" aria-label="Magic: The Gathering preview">
-        <h3>Magic: The Gathering</h3>
+        <div class="image-wrapper">
+          <img src="https://via.placeholder.com/300x180?text=Magic" alt="Magic The Gathering" />
+          <h3>Magic: The Gathering</h3>
+        </div>
         <p>Powerful cards and decks for competitive play.</p>
       </div>
 
       <div class="subbox" tabindex="0" aria-label="Yu-Gi-Oh! Cards preview">
-        <h3>Yu-Gi-Oh!</h3>
+        <div class="image-wrapper">
+          <img src="https://via.placeholder.com/300x180?text=Yu-Gi-Oh" alt="Yu-Gi-Oh! Cards" />
+          <h3>Yu-Gi-Oh!</h3>
+        </div>
         <p>Popular duel cards and accessories.</p>
       </div>
 
       <div class="subbox" tabindex="0" aria-label="Sports Cards preview">
-        <h3>Sports Cards</h3>
+        <div class="image-wrapper">
+          <img src="https://via.placeholder.com/300x180?text=Sports+Cards" alt="Sports Cards" />
+          <h3>Sports Cards</h3>
+        </div>
         <p>Baseball, basketball, football cards and memorabilia.</p>
       </div>
 
       <div class="subbox" tabindex="0" aria-label="Trading Card Accessories preview">
-        <h3>Trading Card Accessories</h3>
+        <div class="image-wrapper">
+          <img src="https://via.placeholder.com/300x180?text=Accessories" alt="Trading Card Accessories" />
+          <h3>Trading Card Accessories</h3>
+        </div>
         <p>Protective sleeves, binders, and display cases.</p>
       </div>
     </div>
   </section>
 
   <footer>
-    &copy; 2025 Daily Press Store — All rights reserved.
+    &copy; 2025 Daily Press Store. All rights reserved.
   </footer>
 
 </body>
