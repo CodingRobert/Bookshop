@@ -97,6 +97,7 @@
       background: transparent;
       overflow: hidden;
       z-index: 1;
+      padding-top: 60px; /* space for fixed navbar */
     }
 
     .video-background {
@@ -133,11 +134,13 @@
 
     /* Preview Container */
     .preview-container {
-      display: flex;
+      position: relative;
+      z-index: 10; /* Above video background */
       max-width: 1200px;
       margin: 2rem auto 4rem;
       gap: 2rem;
       padding: 0 1rem;
+      display: flex;
     }
 
     /* Left and Right preview boxes */
@@ -361,7 +364,7 @@
           <img src="https://via.placeholder.com/300x180?text=Accessories" alt="Trading Card Accessories" />
           <h3>Accessories</h3>
         </div>
-        <p>Protective sleeves, binders, and storage solutions.</p>
+        <p>Protective sleeves, binders, and display cases.</p>
       </div>
     </div>
   </section>
