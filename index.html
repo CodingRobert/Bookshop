@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PAPIROS</title>
 
-  <!-- Google Font: UnifrakturCook for blackletter style -->
-  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet" />
-
   <style>
     /* Reset and base */
     * {
@@ -97,38 +94,41 @@
       justify-content: center;
       text-align: center;
       color: white;
+      background: transparent;
       overflow: hidden;
+      z-index: 1;
     }
 
-    /* Video background */
     .video-background {
       position: fixed;
-      top: 0; left: 0;
+      top: 0;
+      left: 0;
       width: 100vw;
       height: 100vh;
       object-fit: cover;
-      z-index: -2;
+      z-index: -1;
     }
 
-    /* Overlay between video and title */
+    /* Overlay to darken video for readability */
     .overlay {
-      position: fixed;
+      position: absolute;
       top: 0; left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0,0,0,0.4);
-      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.3);
+      z-index: 0;
     }
 
     .hero h1 {
       position: relative;
-      z-index: 1;
-      font-size: 6rem;
-      font-family: 'UnifrakturCook', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-weight: 700;
-      text-shadow: 3px 3px 10px rgba(0,0,0,0.85);
-      letter-spacing: 0.15em;
+      font-size: 6rem;
+      color: white;
+      text-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+      z-index: 1;
       user-select: none;
+      letter-spacing: 0.15em;
     }
 
     /* Preview Container */
@@ -264,8 +264,8 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <video class="video-background" autoplay muted loop playsinline> 
+  <section class="hero" aria-label="Hero section with background video and site title">
+    <video class="video-background" autoplay muted loop playsinline>
       <source src="newspapers.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
@@ -316,7 +316,7 @@
           <img src="https://via.placeholder.com/300x180?text=Entertainment" alt="Entertainment News" />
           <h3>Entertainment</h3>
         </div>
-        <p>Celebrity news, movies, and TV updates.</p>
+        <p>Celebrity news, movies, and cultural events.</p>
       </div>
     </div>
 
@@ -329,23 +329,23 @@
           <img src="https://via.placeholder.com/300x180?text=Pokemon" alt="Pokemon Cards" />
           <h3>Pokemon Cards</h3>
         </div>
-        <p>Collect and trade your favorite Pokemon cards.</p>
+        <p>Rare and popular Pokemon trading cards for collectors.</p>
       </div>
 
-      <div class="subbox" tabindex="0" aria-label="Magic The Gathering preview">
+      <div class="subbox" tabindex="0" aria-label="Magic: The Gathering preview">
         <div class="image-wrapper">
-          <img src="https://via.placeholder.com/300x180?text=Magic+The+Gathering" alt="Magic The Gathering Cards" />
+          <img src="https://via.placeholder.com/300x180?text=Magic" alt="Magic The Gathering" />
           <h3>Magic: The Gathering</h3>
         </div>
-        <p>Explore decks and strategy from Magic players worldwide.</p>
+        <p>Powerful cards and decks for competitive play.</p>
       </div>
 
-      <div class="subbox" tabindex="0" aria-label="Yu-Gi-Oh preview">
+      <div class="subbox" tabindex="0" aria-label="Yu-Gi-Oh! Cards preview">
         <div class="image-wrapper">
-          <img src="https://via.placeholder.com/300x180?text=Yu-Gi-Oh" alt="Yu-Gi-Oh Cards" />
+          <img src="https://via.placeholder.com/300x180?text=Yu-Gi-Oh" alt="Yu-Gi-Oh! Cards" />
           <h3>Yu-Gi-Oh!</h3>
         </div>
-        <p>Find rare cards and build your ultimate deck.</p>
+        <p>Popular duel cards and accessories.</p>
       </div>
 
       <div class="subbox" tabindex="0" aria-label="Sports Cards preview">
@@ -353,15 +353,15 @@
           <img src="https://via.placeholder.com/300x180?text=Sports+Cards" alt="Sports Cards" />
           <h3>Sports Cards</h3>
         </div>
-        <p>Memorabilia and collectibles from your favorite sports stars.</p>
+        <p>Baseball, basketball, and football cards for fans.</p>
       </div>
 
       <div class="subbox" tabindex="0" aria-label="Trading Card Accessories preview">
         <div class="image-wrapper">
           <img src="https://via.placeholder.com/300x180?text=Accessories" alt="Trading Card Accessories" />
-          <h3>Trading Card Accessories</h3>
+          <h3>Accessories</h3>
         </div>
-        <p>Protect your cards with sleeves, binders, and more.</p>
+        <p>Protective sleeves, binders, and storage solutions.</p>
       </div>
     </div>
   </section>
